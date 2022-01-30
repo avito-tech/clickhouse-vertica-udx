@@ -1,0 +1,7 @@
+[clickhouse_test]
+database='default'
+user='default'
+host='clickhouse'
+port='9000'
+storage_access_resolver='http://127.0.0.1:9876/storage_access'
+
