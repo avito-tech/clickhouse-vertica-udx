@@ -9,7 +9,7 @@ Features:
 * pushing down predicates, group by, limit, semijoins
 * elimination of unused columns
 
-Contains two components:
+Connector contains two components:
 * vertica udx-library with staticly compiled c++17 based clickhouse client
 * query service to parse queries for predicates, group by and so on
 
@@ -43,14 +43,14 @@ Test environment can be set with docker compose:
 ```
 docker-compose up
 ```
-Tests can be run as:
+Run tests with:
 ```
-DSN_ROOT=/opt/vertica-udf vsql -U dbadmin -h 127.0.0.1 -p 54330 -f test.sql
+DSN_ROOT=/opt/vertica-udf vsql -U dbadmin -p 54330 -f test.sql
 ```
 
 # Usage
 
-You basicly create external table and use it in queries:
+You basically create external table and use it in queries:
 
 ```
 create external table clickhouse_tables
