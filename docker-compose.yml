@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  clickhouse:
+    image: clickhouse/clickhouse-server
+    ports:
+      - "9001:9000"
+  vertica-ce-sdk:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    ports:
+      - "54330:5433"
+    environment:
+      - "DSN_ROOT=/opt/vertica-udf/"
+

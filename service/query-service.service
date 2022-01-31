@@ -1,0 +1,15 @@
+[Unit]
+Description=DWH query service for storage access parsing
+Requires=
+After=
+
+[Service]
+Environment=
+ExecStart=python3 /usr/bin/query_service.py
+TimeoutSec=10
+RestartSec=5
+Restart=always
+Type=simple
+
+[Install]
+WantedBy=default.target
